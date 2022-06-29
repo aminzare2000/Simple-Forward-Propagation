@@ -76,6 +76,8 @@ node_weights = small_network['layer_1']['node_1']['weights']
 node_bias = small_network['layer_1']['node_1']['bias']
 
 np.random.seed(12)
+
+# random init weight and inputs
 inputs = np.around(np.random.uniform(size=5), decimals=2)
 weighted_sum = compute_weighted_sum(inputs, node_weights, node_bias)
 print('The weighted sum at the first node in the hidden layer is {}'.format(np.around(weighted_sum[0], decimals=4)))
